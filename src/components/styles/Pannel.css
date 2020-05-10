@@ -1,0 +1,41 @@
+.control-pannel {
+  flex-basis: 80%;
+  display: grid;
+  gap: 0.4rem 0.8rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin: 0 auto;
+}
+
+.control-pannel .configs {
+  box-sizing: border-box;
+  padding: 0.75rem 0rem;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-around;
+
+  background-color: #79c6d8;
+  border-radius: 0.75rem;
+}
+
+.control-pannel .operations {
+  box-sizing: border-box;
+  padding: 0.75rem 0.9rem;
+  grid-row: 1 / 6;
+  grid-column: 4 / 5;
+  background-color: #79c6d8;
+  border-radius: 0.75rem;
+}
+
+.control-pannel .numpad {
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  grid-row: 2 / 6;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.2rem 1.55rem;
+  background-color: #80ccdd;
+}
