@@ -30,7 +30,7 @@ export default function Pannel(props) {
         />
         <Button
           buttonType="operator"
-          symbol="x"
+          symbol="*"
           onClick={(e) => props.onClick(e)}
         />
         <Button

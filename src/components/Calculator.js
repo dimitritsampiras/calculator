@@ -2,6 +2,7 @@ import React from 'react';
 import Display from './Display';
 import Pannel from './Pannel';
 import './styles/Calculator.css';
+import calculate from '../logic/calculate';
 
 export default class Calculator extends React.Component {
   
@@ -9,21 +10,22 @@ export default class Calculator extends React.Component {
     super(props);
     this.state = {
       display: "0",
-      stack: ""
+      equation: ""
     }
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
-    console.log(e.target.value);
-    this.setState({
-      total: e.target.value
-    })
+    this.setState( calculate(this.state, e.target.value + ''));
+    console.log("Equation: " + this.state.equation);
+    console.log("Display: " + this.state.display);
   }
 
   render() {
     return(
       <div className="calculator">
-        <Display value={this.state.next || this.state.total || "0"}/>
+        <Display value={this.state.display || "0"}/>
         <Pannel onClick={(e) => this.handleClick(e)}/>
       </div>
     )
