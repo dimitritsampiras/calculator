@@ -12,4 +12,6 @@
   background-color: #80ccdd;
   box-shadow: inset .25rem -.25rem .35rem -.1rem rgba(255, 255, 255, 0.08), 
   inset -.2rem .2rem .35rem -.1rem rgba(0,0,0, .04);
+
+  overflow: hidden;
 }
